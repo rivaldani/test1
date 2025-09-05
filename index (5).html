@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeri - MPP Kampar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f8fc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: #003366;
+      padding: 16px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 10px;
+      color: #003366;
+    }
+
+    h2 {
+      color: #003366;
+      margin: 40px 0 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px 60px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    .filter-controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      padding: 8px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ddd;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: #004c99;
+      color: white;
+    }
+
+    .gallery-item {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #003366;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .navbar a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.php">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="instansi.html">Instansi</a>
+    <a href="formulir.html">Formulir</a>
+    <a href="alur.html">Alur</a>
+    <a href="galeri.html" class="active">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+
+  <!-- Judul -->
+  <h1 data-aos="fade-down">Galeri MPP Kabupaten Kampar</h1>
+
+  <!-- Filter -->
+  <div class="filter-controls">
+    <button class="filter-btn active" data-filter="all">Semua</button>
+    <button class="filter-btn" data-filter="pelayanan">Pelayanan</button>
+    <button class="filter-btn" data-filter="fasilitas">Fasilitas</button>
+  </div>
+
+  <div class="container">
+    <div class="gallery-grid">
+      <a href="img/pelayanan1.jpg" data-lightbox="galeri" class="gallery-item pelayanan" data-aos="zoom-in"><img src="img/pelayanan1.jpg" alt="Pelayanan 1"></a>
+      <a href="img/pelayanan2.jpg" data-lightbox="galeri" class="gallery-item pelayanan" data-aos="zoom-in" data-aos-delay="100"><img src="img/pelayanan2.jpg" alt="Pelayanan 2"></a>
+      <a href="img/pelayanan3.jpg" data-lightbox="galeri" class="gallery-item pelayanan" data-aos="zoom-in" data-aos-delay="200"><img src="img/pelayanan3.jpg" alt="Pelayanan 3"></a>
+      
+      <a href="img/a5.jpeg" data-lightbox="galeri" class="gallery-item fasilitas" data-aos="zoom-in" data-aos-delay="200"><img src="img/a5.jpeg" alt="fasilitas 3"></a>  
+      <a href="img/fasilitas1.jpg" data-lightbox="galeri" class="gallery-item fasilitas" data-aos="fade-up"><img src="img/fasilitas1.jpg" alt="Fasilitas 1"></a>
+      <a href="img/fasilitas2.jpg" data-lightbox="galeri" class="gallery-item fasilitas" data-aos="fade-up" data-aos-delay="100"><img src="img/fasilitas2.jpg" alt="Fasilitas 2"></a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Mal Pelayanan Publik Kabupaten Kampar
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

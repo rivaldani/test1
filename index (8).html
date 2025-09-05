@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informasi Detail - MPP Kampar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f8fc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .back-section {
+      background-color: #003366;
+      padding: 16px 20px;
+      color: white;
+    }
+
+    .back-section a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: slideIn 0.8s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .info-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: #004c99;
+    }
+
+    .info-box p {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #003366;
+      color: white;
+      margin-top: 60px;
+    }
+
+    /* Tombol Kembali ke Atas */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50px;
+      font-size: 18px;
+      display: none;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    #backToTop:hover {
+      background: #004c99;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back button -->
+  <div class="back-section">
+    <a href="javascript:history.back()">← Kembali ke Halaman Sebelumnya</a>
+  </div>
+
+  <!-- Konten -->
+  <div class="container">
+    <h1>Informasi Layanan MPP Kampar</h1>
+
+    <div class="info-box">
+      <h3>Waktu Operasional</h3>
+      <p>
+        Mal Pelayanan Publik (MPP) Kabupaten Kampar buka setiap hari kerja dari Senin hingga Jumat, pukul 08.00 - 16.00 WIB. 
+        Istirahat pukul 12.00 - 13.00 WIB (Jumat pukul 11.30 - 13.00 WIB).
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Standar Pelayanan</h3>
+      <p>
+        Setiap layanan di MPP telah memiliki standar pelayanan yang ditetapkan berdasarkan regulasi dari masing-masing instansi.
+        Pengunjung dapat melihat SOP secara langsung di loket atau mengakses informasi melalui website resmi instansi.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Panduan Penggunaan Layanan</h3>
+      <p>
+        Untuk kemudahan, pengunjung disarankan untuk membawa dokumen persyaratan lengkap dan mengikuti alur layanan yang telah ditentukan.
+        Jika membutuhkan bantuan, petugas front office akan siap membantu.
+      </p>
+    </div>
+  </div>
+
+  <!-- Tombol ke atas -->
+  <button id="backToTop" title="Kembali ke atas">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Mal Pelayanan Publik Kabupaten Kampar
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const btn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      btn.style.display = window.scrollY > 100 ? "block" : "none";
+    });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>

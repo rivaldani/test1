@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instansi Layanan - MPP Kampar</title>
+
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .header {
+      background: #004080;
+      padding: 15px 20px;
+      color: white;
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .nav a.active, .nav a:hover {
+      color: #ffc107;
+    }
+
+    
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+    
+    body.fade-in {
+      opacity: 0;
+      animation: fadeIn 0.6s ease-in forwards;
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
+
+    .main-section {
+      padding: 60px 30px;
+    }
+
+    .main-section h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 600;
+      color: #004080;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    
+    .card-title {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffc107;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo-white.png" alt="Logo MPP" width="150">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.php">Beranda</a></li>
+          <li><a href="index(1).html">Tentang</a></li>
+          <li><a href="index(2).html" class="active">Instansi</a></li>
+          <li><a href="index(8).html">Informasi</a></li>
+          <li><a href="index(5).html">Galeri</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Konten Instansi -->
+  <main class="main-section">
+    <h1 data-aos="fade-down">Instansi Layanan di MPP Kampar</h1>
+    <div class="grid">
+      <div class="card" data-aos="fade-right" data-aos-delay="100">
+        <a href="/polres.html">
+          <img src="img/polres.png" alt="Polres Kampar">
+          <div class="card-body">
+            <h3>Kepolisian Resor Kampar</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-left" data-aos-delay="200">
+        <a href="pengadilan-agama.html">
+          <img src="img/pengadilan.png" alt="Pengadilan Agama">
+          <div class="card-body">
+            <h3>Pengadilan Agama Bangkinang</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="300">
+        <a href="kependudukan.html">
+          <img src="img/disdukcapil.png" alt="Dukcapil">
+          <div class="card-body">
+            <h3>Dinas Kependudukan dan Catatan Sipil</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-left" data-aos-delay="400">
+        <a href="kesehatan.html">
+          <img src="img/dinkes.png" alt="Dinkes">
+          <div class="card-body">
+            <h3>Dinas Kesehatan Kabupaten Kampar</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="500">
+        <a href="bpjs.html">
+          <img src="img/bpjs.png" alt="BPJS Kesehatan">
+          <div class="card-body">
+            <h3>BPJS Kesehatan</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-left" data-aos-delay="600">
+        <a href="djp.html">
+          <img src="img/djp.png" alt="Imigrasi">
+          <div class="card-body">
+            <h3>Kantor Imigrasi Kelas II TPI Pekanbaru</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-left" data-aos-delay="800">
+        <a href="dpmptsp.html">
+          <img src="img/dpmptsp_.png" alt="DPMPTSP">
+          <div class="card-body">
+            <h3>Dinas Penanaman Modal dan PTSP</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="900">
+        <a href="samsat.html">
+          <img src="img/bapenprov.png" alt="Samsat Kampar">
+          <div class="card-body">
+            <h3>SAMSAT (Polantas, Bapenda Provinsi Riau, Jasa Raharja)</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-left" data-aos-delay="1000">
+        <a href="Dinsos.html">
+          <img src="img/aas.png" alt="Dinas Sosial">
+          <div class="card-body">
+            <h3>Dinas Sosial Kabupaten Kampar</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="1100">
+        <a href="naker.html">
+          <img src="img/bpjs1_.png" alt="Dinas Tenaga Kerja">
+          <div class="card-body">
+            <h3>Dinas Tenaga Kerja Kabupaten Kampar</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-left" data-aos-delay="1200">
+        <a href="bapenda.html">
+          <img src="img/bapenda.png" alt="Dinas Perhubungan">
+          <div class="card-body">
+            <h3>Badan Pendapatan Daerah Kabupaten Kampar</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="1300">
+        <a href="Perumdam.html">
+          <img src="img/pdam.png" alt="BPS Kampar">
+          <div class="card-body">
+            <h3>Badan Pusat Statistik Kampar</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-left" data-aos-delay="1400">
+        <a href="pln.html">
+          <img src="img/pln.png" alt="POS Indonesia">
+          <div class="card-body">
+            <h3>PT PLN (Persero)</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="1500">
+        <a href="bpn.html">
+          <img src="img/bpn_.png" alt="BPN Kampar">
+          <div class="card-body">
+            <h3>Badan Pertanahan Nasional Kampar</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="1500">
+        <a href="bankriau.html">
+          <img src="img/brk.png" alt="BPN Kampar">
+          <div class="card-body">
+            <h3>Bank Riau Kepri Syari'ah Cabang Bangkinang</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="1500">
+        <a href="bankmandiri.html">
+          <img src="img/mandiri.png" alt="BPN Kampar">
+          <div class="card-body">
+            <h3>Bank Mandiri Bangkinang</h3>
+          </div>
+        </a>
+      </div>
+      <div class="card" data-aos="fade-right" data-aos-delay="1500">
+        <a href="bankbsi.html">
+          <img src="img/bsi.png" alt="BPN Kampar">
+          <div class="card-body">
+            <h3>Bank Syariah Indonesia KCP Bangkinang</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MPP Kabupaten Kampar. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://wa.me/628216999991" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>

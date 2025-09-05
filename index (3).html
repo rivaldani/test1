@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alur Pelayanan - MPP Kampar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f8fc;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #003366;
+      padding: 16px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
+      margin: 40px 0 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .step-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .step-box {
+      background-color: white;
+      border-left: 6px solid #004c99;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    .step-box::before {
+      content: attr(data-step);
+      position: absolute;
+      top: 20px;
+      left: -35px;
+      background: #004c99;
+      color: white;
+      font-weight: bold;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 16px;
+    }
+
+    .step-box h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #003366;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .step-box::before {
+        left: -28px;
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      .navbar a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.php">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="instansi.html">Instansi</a>
+    <a href="formulir.html">Formulir</a>
+    <a href="alur.html" class="active">Alur</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+
+  <!-- Judul -->
+  <h1>Alur Pelayanan Publik MPP Kampar</h1>
+
+  <!-- Alur Konten -->
+  <div class="container">
+    <div class="step-container">
+
+      <div class="step-box" data-step="1">
+        <h3>Registrasi & Pengambilan Nomor Antrian</h3>
+        <p>Pengunjung mendaftar melalui kios antrian atau aplikasi antrian dan mendapatkan nomor layanan.</p>
+      </div>
+
+      <div class="step-box" data-step="2">
+        <h3>Menunggu di Ruang Tunggu</h3>
+        <p>Pengunjung menunggu nomor antrian dipanggil sesuai dengan layanan yang dituju.</p>
+      </div>
+
+      <div class="step-box" data-step="3">
+        <h3>Pelayanan oleh Instansi</h3>
+        <p>Petugas dari instansi akan memproses kebutuhan atau dokumen layanan yang diminta.</p>
+      </div>
+
+      <div class="step-box" data-step="4">
+        <h3>Pengambilan Hasil</h3>
+        <p>Setelah layanan selesai, pengunjung dapat mengambil dokumen atau hasil layanan di loket yang tersedia.</p>
+      </div>
+
+      <div class="step-box" data-step="5">
+        <h3>Umpan Balik & Survey</h3>
+        <p>Pengunjung dapat memberikan feedback melalui survey kepuasan untuk perbaikan layanan.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Mal Pelayanan Publik Kabupaten Kampar
+  </footer>
+
+</body>
+</html>

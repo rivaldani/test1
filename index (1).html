@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang Kami - MPP Kampar</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      background: #004080;
+      padding: 15px 20px;
+      color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .nav a.active, .nav a:hover {
+      color: #ffc107;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: url('img/mpp.jpg') center/cover no-repeat fixed;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+      animation: fadeDown 1s ease-out;
+    }
+
+    .hero-content h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTION */
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card i {
+      font-size: 40px;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffc107;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo-white.png" alt="Logo MPP" width="150">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.php">Beranda</a></li>
+          <li><a href="index(1).html" class="active">Tentang</a></li>
+          <li><a href="index(2).html">Instansi</a></li>
+          <li><a href="index(8).html">Informasi</a></li>
+          <li><a href="index(5).html">Galeri</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Tentang Mal Pelayanan Publik Kabupaten Kampar</h1>
+      <p>Memberikan kemudahan layanan publik yang cepat, terintegrasi, dan transparan bagi masyarakat Kabupaten Kampar.</p>
+    </div>
+  </div>
+
+  <!-- SECTION CONTENT -->
+  <section>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-bullseye"></i>
+        <h3>Tujuan MPP</h3>
+        <p>Meningkatkan kualitas dan efisiensi layanan publik, mengintegrasikan layanan lintas instansi di satu lokasi, serta mendorong transparansi dan kemudahan bagi masyarakat.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Alamat</h3>
+        <p>Jl. Prof. M. Yamin, SH No.16, Bangkinang, Kabupaten Kampar, Riau</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-history"></i>
+        <h3>Sejarah Singkat</h3>
+        <p>MPP Kabupaten Kampar diresmikan untuk mengintegrasikan berbagai layanan publik dalam satu atap, memudahkan masyarakat mengurus kebutuhan administrasi tanpa harus berpindah-pindah lokasi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 MPP Kabupaten Kampar. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://wa.me/628216999991" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/dpmptsp.kampar/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <!-- ANIMASI SCROLL -->
+  <script>
+    const cards = document.querySelectorAll(".card");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
